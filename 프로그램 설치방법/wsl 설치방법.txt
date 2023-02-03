@@ -1,0 +1,32 @@
+lswsl2 설치 (unbu
+pdf 참고
+*powershell 열 때 관리자 권한으로 실행 후 설치*
+
+초반에 설치 전 세팅 필요 
+1. dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart 설치 후 
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart 설치)
+
+2. 컴퓨터 다시 재부팅 후 
+powershell 열 때 관리자 권한으로 실행하여 
+wsl -l -o 입력, wsl --install -d Ubuntu-20.04 입력
+
+3. ubuntu 자동 설치 후 실행 됨
+아이디, 비번 입력 (wjdgus9012, aktlakfh12)
+$ ls 입력
+ 
+
+<위에서 안됐을 때>
+$ cd ~ (홈으로 이동)
+$ cd / (루트로 이동)
+/$ ls 입력
+
+4. powershell에서 ~~설치
+windows terminal 입력해 설치 클릭 ->microsoft 화면 뜸
+윈도우 터미널 설치 클릭 -> 설치 사이트로 이동 됨
+
+5. c드라이브 -> 사용자 -> admin 에 'workspace' 파일 생성 -> vscode 실행 -> terminal 메뉴 'new terminal'
+-> 오른쪽 + 옆 아래 화살표 클릭 -> ubuntu 클릭 -> 원래는 로그인 되어있는데 안되어있으면 'su -아이디 입력'
+'ctrl' + 'shift' + 'p' 에서 'python : select interpretor' -> 'cakd7' 클릭 후 -> 'new terminal' 클릭
+
+unbutu 자동로그인 실행 
+https://velog.io/@gidskql6671/WSLUbuntu-%EA%B8%B0%EB%B3%B8-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B3%84%EC%A0%95-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0

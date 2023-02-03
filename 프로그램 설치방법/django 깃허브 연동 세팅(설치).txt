@@ -1,0 +1,49 @@
+<장고>
+
+***workspace에서 cakd7 작업하는 내 기본 로그인***
+su - wjdgus9012
+cd /mnt -> cd c/Users/admin/workspace/
+source ~/anaconda3/etc/profile.d/conda.sh -> conda activate cakd7
+----------------------------------------------------------------------------------
+
+<github 연동>
+
+내 github에서) 새로운 repository 생성 (이름 cakd7_dj) -> readme.md (아무 파일 생성) 후 주소 복사
+>vs 코드에서) git clone 깃허브 주소 입력
+cd 파일명 -> django-admin startproject dj . (dj 파일 생성 . 은 해당 폴더에 생성한다는 의미)
+
+구글 드라이브에서 .gitignore 파일 저장 해당 폴더(cakd7_dj파일)에 저장(업데이트 하지말아야할거 설정해줌)
+
+<DB생성>
+
+python manage.py migrate 입력 -> db.splite 3 파일 생성됨
+
+<슈퍼관리자>
+python manage.py createsuperuser 입력 -> 아이디 입력 -> email은 패스 -> 패스워드 생성 (0912) 다시 입력 후 '경고창' 뜨면 그냥 y 입력
+-> 생성완료
+
+python manage.py runserver 입력 -> 'ctrl' 누르고 맨 밑에 http://127.0.0.1:8000/ 여기 주소 클릭 -> 장고 서버창이 뜨면 성공 
+
+git add . 입력 (모든 것을 다 반영하겠다는 의미)
+
+git config --global user.email "jeounghyun48@gmail.com"
+git config --global user.name "leejunghyunA"
+git commit -m (프로젝트 생성-수정입력내용)
+
+----------------------------------------------------------------------
+https://firstquarter.tistory.com/entry/Git-%ED%86%A0%ED%81%B0-%EC%9D%B8%EC%A6%9D-%EB%A1%9C%EA%B7%B8%EC%9D%B8-remote-Support-for-password-authentication-was-removed-on-August-13-2021-Please-use-a-personal-access-token-instead
+
+참조하여 new token 생성
+내토큰 : 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
+---------------------------------------------------------------------
+<blog설치/ single_pages 생성>
+**cakd7_dj폴더 안에서**
+python manage.py startapp blog -> python manage.py startapp single_pages 입력
+bj폴더에 settings.py 열어서 installed_apps에 'blog', 'single_pages' 입력, time-zone에 'Asia/Seoul'로 수정 후 저장
+
+git add . 
+git commit -m (프로젝트 생성-수정입력내용)
+git push 입력 -> Username에 leejunghyunA(깃허브 이름) -> password에 내토큰 주소 복붙 입력 => 내 깃허브에 작업한 내용 다 옴겨짐
+
+
+

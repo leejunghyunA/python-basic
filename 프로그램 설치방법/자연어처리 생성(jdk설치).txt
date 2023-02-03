@@ -1,0 +1,31 @@
+자연어 처리시 사용 : konlpy (한글처리해주는 기능) -> 인터넷에 나온 방법은 복잡
+
+jdk 처리
+jdk 설치 후 programfiles에서 java파일에 들어가서 거기 경로에 설치
+->그럼 jdk와 jre파일 두개개가 설치됨
+1. 시스템환경변수 설정에서 '환경변수' 클릭 
+2. admin에 대한 사용자 변수 에 '새로만들기'에 
+3. <변수이름: JAVA_HOME / 변수값: jdk경로 복붙> 추가
+4. 시스템 변수에 'Path'에 '편집' '새로만들기'에 
+'%JAVA_HOME%\jre1.8.0_301\bin\server'을 추가 생성 
+확인-> 확인-> 확인 
+
+명령프롬프트창에서 프로그램 설치
+https://data-scientist-brian-kim.tistory.com/79 참조
+
+jupyter에서 
+
+import konlpy입력
+!pip install xmltodict #설치 
+!pip install beautifulsoup4 #설치
+
+url = 'http://apis.data.go.kr/1170000/law/lawSearchList.do?\
+serviceKey=22Nn4Pf%2BappHSmLc8TsnR7KrSDh2oLZY%2BKUO%2Fk%2BAzsebJsWWxNqAafz3Y4c1t7SVy6SUTa2qvXNdbIwBzIvhrQ%3D%3D&\
+target=law&query=*&numOfRows=10000&pageNo=1'
+
+import requests
+from bs4 import BeautifulSoup as bs
+import xmltodict
+
+
+이후 wordcloud 파일 참고-

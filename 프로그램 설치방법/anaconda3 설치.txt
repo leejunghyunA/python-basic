@@ -1,0 +1,34 @@
+UBUNTU 로 아나콘다 설치 방법
+
+1. ls 입력 (리스트에 anaconda3 있는지 확인)
+2. bash Anaconda3-5.2.0-Linux-x86_64.sh 입력 (설치~~~~)
+3. enter 여러번 클릭 후 yes or no 창 뜨면 'yes' 입력 -> 마지막 2개 yes(경로 설정 질문*no입력시), no(vsCode 설치 질문) 입력
+4. *no 입력시 경로가 지정안됨 이때 해결방법-> vim ~/.bashrc -> 맨 마지막 줄에 "export PATH=/home/아이디/anaconda3/bin:$PATH" 입력 -> 'esc' 입력 ":wq" 입력해서 다시 명령으로 돌아감
+-> source ~/.bashrc 입력 -> which python 입력해서 확인
+
+VScode 연동
+
+<가상환경에 cakd7복사> 
+ 
+1. terminal에서 wsl 클릭 
+2. "c/Users/admin/workspace" 파일에 'cakd7.yaml' 이동 (구글 드라이브에 있음)
+3. /mnt/c/Users/admin/workspace 폴더로 이동 (cakd7.yaml 파일 열어서 파일명, 경로, 아이디 변경)
+4. conda env create -f cakd7.yaml 입력 시 오류 나면 
+5. source ~/anaconda3/etc/profile.d/conda.sh 입력 후 4번 코드 다시 입력 conda env list 입력 후 확인 
+6. conda activate cakd7 -> 설치 완료
+7. conda list 입력해 확인
+
+** 터미널 Ubuntu 확인 시 **
+source ~/anaconda3/etc/profile.d/conda.sh 입력
+conda activate cakd7 입력 -> 경로 맨 앞에 (cakd7) 입력됨
+
+<처음에 이거 했었는데 안되서 가상환경에 복사하는거 실행 함>
+6. conda create -n cakd7 python=3.8 입력 -> ls /home/wjdgus9012/anaconda3/envs 입력 (cak7.yaml 확인)
+->conda activate cakd7 -> 설치 완료
+5. conda list 입력해 확인
+
+***********************************
+만약 장고 설치가 안되어있을 때 수기로 설치하는 법
+
+해당 파일 들어간 후 (cakd7)~~~~
+python -m pip install django 입력
