@@ -67,7 +67,7 @@
 - Decision Tree
 - LDA_선형판별분류(Linear Discriminant Analysis)
 
-[보러가기]<https://github.com/leejunghyunA/python-basic/tree/main/3.%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/2.%20%EB%B6%84%EB%A5%98%ED%95%99%EC%8A%B5>
+[[분류 학습 보러가기]](https://github.com/leejunghyunA/python-basic/tree/main/3.%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/2.%20%EB%B6%84%EB%A5%98%ED%95%99%EC%8A%B5)<br/>
 
 3) 앙상블 학습 (모델 여러개를 학습해 예측결과를 평균을 내서 사용)
 
